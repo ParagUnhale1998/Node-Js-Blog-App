@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head.ejs') %>
+        <title>Add New Blog</title>
+</head>
+
+<body>
+    <!-- all components is in partials folder / partials is componants folder of node js -->
+    <%- include('partials/nav.ejs') %>
+        <div class="container mt-4">
+            <form action="/blog" method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" name="title" class="form-control" id="title" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="body" class="form-label">body</label>
+                    <textarea name="body" id="body" class="form-control"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="coverImageURL" class="form-label">Select Image</label>
+                    <input class="form-control" type="file" name="coverImageURL" id="coverImageURL">
+                  </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+        </div>
+        <%- include('partials/scripts.ejs') %>
+</body>
+
+</html>
